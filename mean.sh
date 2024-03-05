@@ -27,7 +27,7 @@ cut -d, -f"$column" "$file" | tail -n +2 | {
     mean=$(echo "scale=2; $sum / $count" | bc)
     echo $mean
   else
-    echo "Error: No data to process" 1>&2
+    echo "Error: No data" 1>&2
     exit 2
   fi
 }
